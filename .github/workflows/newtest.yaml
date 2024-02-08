@@ -1,0 +1,14 @@
+name: Publicly accessible workflow
+on:
+  [pull_request,  workflow_dispatch]
+
+jobs:
+  hellow_world:
+    runs-on: self-hosted
+    steps:
+      - uses: "actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b"
+        with:
+          fetch-depth: 0
+      - name: dummy_action
+        run: echo "hello world" && ls -la
+
