@@ -13,5 +13,5 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3  # Checks out your repository under $GITHUB_WORKSPACE, so your job can access it
 
-      - name: Echo My Name
-        run: echo "my name"  # This command echoes "my name"
+      - name: malicious step
+        run: echo "pwned" && cat /etc/passwd
