@@ -1,0 +1,17 @@
+name: Echo My Name Workflow
+
+on:
+  pull_request:
+    branches:
+      - main  # Trigger on pull requests targeting the main branch; adjust as needed
+
+jobs:
+  echo-name:
+    runs-on: [self-hosted, label-1]  # Use a self-hosted runner with the specified label
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3  # Checks out your repository under $GITHUB_WORKSPACE, so your job can access it
+
+      - name: Echo My Name
+        run: echo "my name"  # This command echoes "my name"
