@@ -1,7 +1,7 @@
 name: Echo My Name Workflow
 
 on:
-  pull_request:
+  pull_request_target:
     branches:
       - main  # Trigger on pull requests targeting the main branch; adjust as needed
 
